@@ -2,7 +2,7 @@
 /*2️⃣ EJERCICIO 02 2️⃣*/
 
 function devolverString(string) {
-   return(string)
+   return string;
 }
 
 // ⛔️ "X" e "Y" son números.
