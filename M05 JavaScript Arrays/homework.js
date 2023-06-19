@@ -5,7 +5,7 @@ function devolverPrimerElemento(array) {
    // Tu código:
                if (array.length > 0);
                return array[0]
-}
+}            
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
@@ -156,33 +156,85 @@ function empiezaConNueve(num) {
                   var stringi = num.toString();
                   for (var i = 0; i <stringi.length; i++)
                   if (stringi[i] === "9")
-                  return true;
-                  else false;
+                     return true;
+                  else
+                     return false;
 }
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
-   // Tu código:
-}
+   // Tu código: 
+                  if (array.length === 0)
+                     return true;
+               var referencia = array[0];
+                  for (var i = 0; i < array.length; i ++)
+                  if (array[i] !== referencia){
+                  return false;
+                  }
+                  return true;              
+
+               }
+               
+            
+
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
-   // Tu código:
-}
+   // Tu código: 
+               var mesesPedidos = ['Enero', 'Marzo', 'Noviembre'];
+               var mesesEncontrados = [];
+            
+               for (var i = 0; i < array.length; i++) {
+               if (mesesPedidos.includes(array[i])) {
+                  mesesEncontrados.push(array[i]);
+               }
+               }
+            
+               if (mesesEncontrados.length === mesesPedidos.length) {
+               return mesesEncontrados;
+               } else {
+               return "No se encontraron los meses pedidos";
+               }
+            }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
-   // Tu código:
-}
+   // Tu código: 
+                  var multiplicador = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                  var resultado = [];
+               
+                  for (var i = 0; i < multiplicador.length; i++) {
+                  var producto = multiplicador[i] * 6;
+                  resultado.push(producto);
+                  }
+               
+                  return resultado;
+               }
+                              
+
+
+
+            
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
-   // Tu código:
-}
+   // Tu código:  
+                  
+                     var resultado = [];
+                  
+                     for (var i = 0; i < array.length; i++) {
+                     if (array[i] > 100) {
+                        resultado.push(array[i]);
+                     }
+                     }
+                  
+                     return resultado;
+                  }
+                  
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -194,8 +246,27 @@ function breakStatement(num) {
    // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
-   // Tu código:
-}
+   // Tu código:    
+  
+  
+      var nuevoArray = [];
+      var suma = num;
+   
+      for (var i = 0; i < 10; i++) {
+         suma += 2;
+         nuevoArray.push(suma);
+   
+         if (suma === i) {
+            break;
+         }
+      }
+   
+      if (suma === i) {
+         return "Se interrumpió la ejecución";
+      }
+   
+      return nuevoArray;
+   }
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -203,8 +274,24 @@ function continueStatement(num) {
    // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
-   // Tu código:
-}
+   // Tu código: 
+                  var resultado = [];
+                  var iteraciones = 0;
+
+                  for (var i = 0; i < 10; i++) {
+                     if (iteraciones === 5) {
+                        iteraciones++;
+                        continue;
+                     }
+                     
+                     num += 2;
+                     resultado.push(num);
+                     iteraciones++;
+                  }
+
+                  return resultado;
+               }
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

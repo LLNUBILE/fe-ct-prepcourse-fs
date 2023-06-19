@@ -7,10 +7,10 @@ function obtenerMayor(x, y) {
    // Tu código:
    if (x >= y) {
       return x;
-   } else {
+   } else 
       return y;
    }
-}
+
 
 function mayoriaDeEdad(edad) {
    // Determinar si la persona puede ingresar al evento según su edad.
@@ -41,6 +41,8 @@ function conection(status) {
    }
 }
 
+              
+               
 function saludo(idioma) {
    // Retornar un saludo en tres diferentes lenguajes:
    // Si "idioma" es "aleman", devuelve "Guten Tag!".
@@ -48,16 +50,35 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
-   if (idioma == "aleman") {
-      return "Guten Tag!";
-   } else if (idioma == "mandarin") {
-      return "Ni Hao!";
-   }else if (idioma == "ingles") {
-      return "Hello!";
-   }else {
-      return "Hola!";
-   }
-}
+                  if (idioma == "aleman") {
+                     return "Guten Tag!";
+                  } else if (idioma == "mandarin") {
+                     return "Ni Hao!";
+                  }else if (idioma == "ingles") {
+                     return "Hello!";
+                  }else {
+                     return "Hola!";
+                  }
+               }
+
+ // switch (idiomas) {
+               // case "aleman":
+               
+               // return "Guten Tag!";
+            
+               // case "aleman":
+               
+               // return "Guten Tag!";
+            
+               // case "mandarin":
+               
+               // return "Ni Hao!";
+
+               // case "ingles":
+               
+               // return "Hello!";
+            
+               // default: "Hola";
 
 function colors(color) {
    // La función recibe un color. Retornar el string correspondiente:
@@ -68,20 +89,22 @@ function colors(color) {
    // Si no es ninguno de esos colores           --> "Color not found".
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
-   switch(color) {
-      case "blue":
-         return "This is blue";
-      case "red":
-         return "This is red";
-      case "green":
-         return "This is green";
-      case "orange":
-         return "This is orange";
-      default:
-         return "Color not found";
-   }
+  
+  
+         switch(color) {
+            case "blue":
+               return "This is blue";
+            case "red":
+               return "This is red";
+            case "green":
+               return "This is green";
+            case "orange":
+               return "This is orange";
+            default:
+               return "Color not found";
+         }
 
-}
+      }
 
 
 function esDiezOCinco(num) {
